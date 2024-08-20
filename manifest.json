@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Bet Menu Extension",
+  "version": "1.0",
+  "description": "Roullete mania bosku.",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Click to show menu"
+  }
+}
+
